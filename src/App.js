@@ -80,7 +80,7 @@ class App extends React.Component {
         console.log("tut");
 
         cell = document.createElement("td");
-        cellText = document.createTextNode("Не выполнено");
+        cellText = document.createTextNode("Невыполнено");
         cell.appendChild(cellText);
         row.appendChild(cell);
 
@@ -97,7 +97,7 @@ class App extends React.Component {
             var child = row.getElementsByTagName("td")[1];
             if (this.data[this.find_id(id)][1] === true){
                 this.data[this.find_id(id)][1] = false;
-                child.innerHTML = "Не выполнено";
+                child.innerHTML = "Невыполнено";
                 this.change_status();
             } else{
                 this.data[this.find_id(id)][1] = true;
@@ -140,7 +140,7 @@ class App extends React.Component {
             <select name="Name_of_list_box" size="Number_of_options" className="List" onChange={this.change_order}>
                 <option id = "All" value="1"> Все</option>
                 <option id = "Done" value="2"> Выполнено</option>
-                <option id = "NotDone" value="3"> Не Выполнено</option>
+                <option id = "NotDone" value="3"> Невыполнено</option>
             </select>
             <table className="MainTable">
                 <thead>
